@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Set your OpenAI API key
-openai.api_key = 'your_openai_api_key'
+openai.api_key = 'sk-proj-VwvDW5XGgmas6zWA1gQ0T3BlbkFJq6qEJKlyU2QU78VOENAs'
 
 # Function to generate the inspection report
 def generate_inspection_report(inspection_data):
