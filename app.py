@@ -1,8 +1,13 @@
 import streamlit as st
 import openai
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Set your OpenAI API key
-openai.api_key = 'sk-proj-VwvDW5XGgmas6zWA1gQ0T3BlbkFJq6qEJKlyU2QU78VOENAs'
+openai.api_key = os.getenv('sk-proj-kKDuy8RdIhiaYtCSHW4kT3BlbkFJTVWNVK9rXCSKrV1QNsab')
 
 # Function to generate the inspection report
 def generate_inspection_report(inspection_data):
@@ -57,7 +62,3 @@ if st.button('Generate Report'):
         translated_report = translate_report(report, language)
         st.subheader(f"Translated Report ({language})")
         st.write(translated_report)
-
-# Run the Streamlit app
-if __name__ == '__main__':
-    st.run()
